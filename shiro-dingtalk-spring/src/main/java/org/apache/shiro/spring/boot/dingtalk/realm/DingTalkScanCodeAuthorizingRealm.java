@@ -17,7 +17,7 @@ import org.springframework.util.StringUtils;
 
 import com.dingtalk.api.response.OapiSnsGetuserinfoBycodeResponse;
 import com.dingtalk.api.response.OapiSnsGetuserinfoBycodeResponse.UserInfo;
-import com.dingtalk.spring.boot.DingTalkTemplate;
+import io.github.easy4j.dingtalk.service.DingTalkTemplate;
 import com.taobao.api.ApiException;
 
 /**
@@ -72,6 +72,8 @@ public class DingTalkScanCodeAuthorizingRealm extends AbstractAuthorizingRealm {
 			info = getRepository().getAuthenticationInfo(dingTalkToken);
 		} catch (AuthenticationException e) {
 			ex = e;
+		} catch (io.github.easy4j.dingtalk.error.DingTalkApiException e) {
+			ex = new AuthenticationException(e);
 		} catch (ApiException e) {
 			ex = new AuthenticationException(e);
 		}

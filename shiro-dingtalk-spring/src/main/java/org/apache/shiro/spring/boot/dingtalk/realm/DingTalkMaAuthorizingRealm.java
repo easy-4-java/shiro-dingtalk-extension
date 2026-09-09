@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
-import com.dingtalk.spring.boot.DingTalkTemplate;
+import io.github.easy4j.dingtalk.service.DingTalkTemplate;
 import com.taobao.api.ApiException;
 
 /**

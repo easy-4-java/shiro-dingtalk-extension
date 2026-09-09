@@ -11,7 +11,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.dingtalk.spring.boot.DingTalkTemplate;
+import io.github.easy4j.dingtalk.service.DingTalkTemplate;
 
 /**
  * Unit tests for DingTalk authorizing realm classes.
