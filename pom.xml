@@ -176,10 +176,10 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <modules>
-        <module>shiro-dingtalk-core</module>
-        <module>shiro-dingtalk-spring</module>
-    </modules>
+    <subprojects>
+        <subproject>shiro-dingtalk-core</subproject>
+        <subproject>shiro-dingtalk-spring</subproject>
+    </subprojects>
     <!-- 制品发布仓库配置（distributionManagement） -->
     <distributionManagement>
         <repository>
